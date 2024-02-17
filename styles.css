@@ -1,0 +1,30 @@
+
+* {
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+}
+
+section{
+    background-color: rgb(255, 222, 159);
+    height: 40rem;
+}
+
+#landing-section {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#
+
+#about-us {
+    
+}
