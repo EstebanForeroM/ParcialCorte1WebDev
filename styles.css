@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     font-family: 'arial';
@@ -5,7 +7,7 @@
 
 header {
     display: flex;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     height: 3rem;
     align-items: center;
     position: fixed;
@@ -15,14 +17,16 @@ header {
 
 header h1 {
     margin-left: 4%;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 header input{
     width: 50%;
-    background-color: blueviolet;
+    background-color: #f7f8f9;
+    box-shadow: 5px 3px 10px gray;
     height: 1.8rem;
     border-style: none;
-    border-radius: 5rem;
+    border-radius: 0.5rem;
 }
 
 header img {
@@ -81,10 +85,39 @@ section {
 }
 
 .dev-container{
-    margin-top: 50px;
-    background-color: rgb(157, 255, 0);
+    margin-top: 5%;
+    background-color: rgb(255, 209, 60);
     text-align: center;
-    height: 50%;
-    min-width: 300px;
-    width: 30%;
+    border-radius: 1.5rem;
+    width: 40%;
+    min-width: 12rem;
+    padding-bottom: 5%;
+}
+
+footer {
+    padding: 2rem;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+footer ul li{
+    margin-bottom: 1rem;
+}
+
+#footer-img-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer-img-container img {
+    height: 3rem;
+    margin-right: 1rem;
 }
