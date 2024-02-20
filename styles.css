@@ -1,4 +1,46 @@
 * {
     margin: 0;
+    font-family: 'arial';
 }
 
+header {
+    display: flex;
+    background-color: antiquewhite;
+    height: 3rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+header h1 {
+    margin-left: 4%;
+}
+
+header input{
+    width: 50%;
+    background-color: blueviolet;
+    height: 1.8rem;
+    border-style: none;
+    border-radius: 10px;
+}
+
+header img {
+    margin-right:4%;
+    height: 2rem;
+}
+
+
+#main-image{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#about-us {
+    margin-top: 100vh;
+    background-color: aqua;
+    height: 700px;
+}
