@@ -11,6 +11,7 @@ nav{
     align-items: center;
     height: 4rem;
     flex-wrap: wrap;
+    position: fixed;
 }
 
 section{
