@@ -1,14 +1,17 @@
-* {
-    margin: 0;
-    font-family: 'arial';
+header {
+    box-shadow: 0px 5px 20px gray;
 }
 
-header {
-    display: flex;
-    background-color: antiquewhite;
-    height: 3rem;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
+section{
+    margin-top: 5rem;   
+    width: 30rem;
+}
+
+#category-selector button {
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-style: none;
+    cursor: pointer;
+    
 }
