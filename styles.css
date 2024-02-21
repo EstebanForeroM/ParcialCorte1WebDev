@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     font-family: 'arial';
@@ -5,25 +7,26 @@
 
 header {
     display: flex;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     height: 3rem;
     align-items: center;
     position: fixed;
     width: 100%;
     justify-content: space-between;
-    z-index: 100;
 }
 
 header h1 {
     margin-left: 4%;
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 header input{
     width: 50%;
-    background-color: blueviolet;
+    background-color: #f7f8f9;
+    box-shadow: 5px 3px 10px gray;
     height: 1.8rem;
     border-style: none;
-    border-radius: 10px;
+    border-radius: 0.5rem;
 }
 
 header img {
@@ -31,6 +34,18 @@ header img {
     height: 2rem;
 }
 
+main{
+    height: 100vh;
+    background-image: url("img/mainImage.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+section {
+    width: 100%;
+}
 
 #main-image{
     position: absolute;
@@ -39,8 +54,70 @@ header img {
     height: 100vh;
 }
 
-#about-us {
-    margin-top: 100vh;
-    background-color: aqua;
-    height: 700px;
+#about-us{
+    background-color: aquamarine;
+    display: flex;
+    width: 100%;;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 5%;
+}
+
+.dev-container img{
+    border-radius: 500px;
+    aspect-ratio: 1/1;
+    width: 60%;
+    object-fit: cover;
+    margin-bottom: 5%;
+}
+
+.dev-container h1{
+    font-size: clamp(2rem, 5vw, 2rem);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.dev-container p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.dev-container{
+    margin-top: 5%;
+    background-color: rgb(255, 209, 60);
+    text-align: center;
+    border-radius: 1.5rem;
+    width: 40%;
+    min-width: 12rem;
+    padding-bottom: 5%;
+}
+
+footer {
+    padding: 2rem;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+footer ul li{
+    margin-bottom: 1rem;
+}
+
+#footer-img-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer-img-container img {
+    height: 3rem;
+    margin-right: 1rem;
 }
