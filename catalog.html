@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="generalStyles.css">
-        <link rel="stylesheet" href="styles2.css">
+        <link rel="stylesheet" href="css/generalStyles.css">
+        <link rel="stylesheet" href="css/styles2.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>FlavorFuse.com</title>
     </head>
     <body>
         <header>
-            <h1> Flavorfuse </h1>
+           <a href="index.html"> <h1> Flavorfuse </h1> </a>
             <input type="text" placeholder="Servings"> 
             <img src="img/cart4.svg" alt=""> 
         </header>
@@ -20,18 +20,58 @@
                 <button> Bebidas </button>
                 <button> Postres </button>
             </section>
-            <div>
-                <h1 id="entradas"> </h1>
-            </div>
-            <div>
-                <h1 id="platos-principales"> </h1>
-            </div>
-            <div>
-                <h1 id="postres"> </h1>
-            </div>
-            <div>
-                <h1 id="Bebidas"> </h1>
-            </div>
+            <section>
+
+                <section class="category-container" id="entradas">
+                    <h1>Entradas</h1>
+                    <article class="food-card">
+                        <img src="img/dessert1.webp" alt="">
+                        <div class="card-text-container">
+                            <h2>Lemon CheeseCake</h2>
+                            <p>Discover our Lemon Cheesecake with Fresh Berries: A zesty lemon cheesecake delight, perfectly complemented
+                                by a medley of fresh strawberries, blueberries, and raspberries.
+                            </p>
+                            <div class="button-card-box">
+                                <p>$10.0</p>
+                                <button> + </button>
+                                <p>1</p>
+                                <button> - </button>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="category-container" id="platos-principales">
+                    <h1>Platos Principales</h1>
+                    
+                </section>
+                <section  class="category-container" id="postres">
+                    <h1>Postres</h1>
+                </section>
+                <section  class="category-container" id="Bebidas">
+                    <h1>Bebidas</h1>
+                </section>
+            </section>
         </main>
+
+        <section class="shop-container shop-container-hidden">
+            <h1>Carrito de Compras</h1>
+            
+        </section>
+
+        <footer>
+            <ul>
+             <li> joelalba010805@gmail.com</li>
+             <li> +57 3052989394</li>
+             <li>estebanmff@gmail.com</li>
+             <li>+57 3185920708</li>
+            </ul>
+             
+            <div id="footer-img-container">
+                 <img src="img/discord.svg" alt="">
+                 <img src="img/youtube.svg" alt="">
+                 <img src="img/instagram.svg" alt="">
+            </div>
+        </footer>
     </body>
+    <script src="dest/frameworks/shopingCartUI.js"></script>
 </html>
