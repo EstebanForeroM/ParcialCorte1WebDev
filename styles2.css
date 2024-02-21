@@ -5,6 +5,8 @@ header {
 section{
     margin-top: 5rem;   
     width: 30rem;
+    display: flex;
+    scroll-behavior: y;
 }
 
 #category-selector button {
