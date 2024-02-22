@@ -1,13 +1,17 @@
-import { cart } from "./cartData";
-const url = 'www.example.com/api';
-const formData = new URLSearchParams();
-Object.keys(cart).forEach((key, value) => formData.append(key, value.toString()));
+import { cart } from "./cartData.js";
+let url = 'http://www.example.com/api';
+const params = new URLSearchParams();
+// Ensure cart is treated as ShoppingCart to satisfy TypeScript's type system
+Object.keys(cart).forEach((key) => {
+    const value = cart[key];
+    if (typeof value === 'number' || typeof value === 'string') {
+        params.append(key, value.toString());
+    }
+});
+// Append params to URL
+url += '?' + params.toString();
 fetch(url, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: formData.toString(),
+    method: 'GET',
 })
     .then(response => response.json())
     .then(data => console.log('Success:', data))
