@@ -1,4 +1,3 @@
-"use strict";
 let buttonShoppingCart = document.getElementById('shopping-cart-button');
 let shoppingCartUI = document.getElementsByClassName('shop-container');
 let isVisible = false;
@@ -15,3 +14,4 @@ function changeUIcartState(event) {
         isVisible = true;
     }
 }
+export {};

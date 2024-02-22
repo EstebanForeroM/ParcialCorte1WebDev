@@ -1,15 +1,20 @@
 class ShoppingCart {
-    constructor(products) {
-        this.products = products;
+    constructor() {
+        this.products = {};
     }
-    addProduct(product) {
-        this.products.push(product);
+    addProduct(productName) {
+        this.products[productName] = this.products[productName] + 1 || 1;
     }
     removeProduct(productName) {
-        this.products = this.products.filter(p => p.Name !== productName);
+        if (this.products[productName] > 2) {
+            this.products[productName] -= 1;
+        }
+        else {
+            delete this.products[productName];
+        }
     }
     get getProducts() {
         return this.products;
     }
 }
-export {};
+export { ShoppingCart };

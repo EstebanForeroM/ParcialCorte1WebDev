@@ -1,23 +1,27 @@
 import { Product } from "./Product";
 
-class ShoppingCart{
 
-    private products : Product[];
-    
-    constructor(products : Product[]) {
-        this.products = products;
+class ShoppingCart{
+    private products : {[productName: string] : number};
+    constructor() {
+        this.products = {};
     }
 
-    addProduct(product : Product) {
-        this.products.push(product);
+    addProduct(productName : string) {
+        this.products[productName] = this.products[productName] + 1 || 1;
     }
     
     removeProduct(productName : string) {
-        this.products = this.products.filter(p => p.Name !== productName);
-
+        if (this.products[productName] > 2) {
+            this.products[productName] -= 1;
+        } else {
+            delete this.products[productName];
+        }
     }
 
-    get getProducts() : Product[] {
+    get getProducts() : {[productName: string] : number} {
         return this.products;
     }
 }
+
+export { ShoppingCart };

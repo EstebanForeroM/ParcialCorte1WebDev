@@ -38,16 +38,18 @@
             </section>
         </main>
 
-        <section class="shop-container">
+        <section class="shop-container shop-container-hidden">
             <h1>Carrito de Compras</h1>
             <section id="carts-elements-container">
                 <article class="cart-shopping-item">
                     <img src="img/img-food/BeefWellington.webp" alt="">
                     <h1>Ensalada Cesár</h1>
-                    <button>+</button>
-                    <p>Cantidad</p>
-                    <button>-</button>
-                    <p>$34.99</p>
+                    <div>
+                        <button id="plus">+</button>
+                        <p>99</p>
+                        <button id="minus">-</button>
+                        <p>$34.99</p>
+                    </div>
                 </article>
             </section>
         </section>
@@ -67,6 +69,7 @@
             </div>
         </footer>
     </body>
+    <script type="module" src="dest/frameworks/userInputHandler.js"></script>
     <script type="module" src="dest/entities/Categories.js"></script>
     <script type="module" src="dest/entities/Product.js"></script>
     <script src="dest/frameworks/shopingCartUI.js" ></script>
