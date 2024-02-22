@@ -2,13 +2,14 @@ import { cart } from "./cartData.js";
 let idCounter = 0;
 let mappingIdToProduct = {};
 function getButtonId() {
-    idCounter = idCounter + 1;
-    return "btn-operation " + idCounter;
+    idCounter++;
+    return "btn-operation-" + idCounter;
 }
 function setButtonEventListener(buttonId, productName, action) {
     let button = document.getElementById(buttonId);
     mappingIdToProduct[buttonId] = [productName, action];
     if (button) {
+        console.log('button ' + button + ' id: ' + buttonId + ' productName: ' + productName + ' action: ' + action);
         button.addEventListener('click', (e) => {
             if (e.target) {
                 const target = e.target;

@@ -6,13 +6,14 @@ let mappingIdToProduct: {[id: string] : [string, string]} = {};
 
 function getButtonId() : string {
     idCounter++;
-    return "btn-operation " + idCounter;
+    return "btn-operation-" + idCounter;
 }
 
 function setButtonEventListener(buttonId: string, productName: string, action : string) {
     let button = document.getElementById(buttonId);
     mappingIdToProduct[buttonId] = [productName, action]
     if (button) {
+        console.log('button ' + button + ' id: ' + buttonId + ' productName: ' + productName + ' action: ' + action)
         button.addEventListener('click', (e) => {
             if (e.target) {
                 const target = e.target as HTMLElement;

@@ -21,9 +21,9 @@ productsList.forEach(product => {
                 <p>${product.Description}</p>
                 <div class="button-card-box">
                     <p>${product.Price}</p>
-                    <button id = '${addButtonId}'> + </button>
+                    <button class = 'btn-operation' id = '${addButtonId}'> + </button>
                     <p>0</p>
-                    <button id= '${removeButtonId}'> - </button>
+                    <button class = 'btn-operation' id= '${removeButtonId}'> - </button>
                 </div>
             </div>
         </article>
