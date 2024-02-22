@@ -1,13 +1,17 @@
+import { categories } from "./Categories";
+
 class Product{
 
     private imageRoot : string;
     private name : string;
     private description : string;
+    private category : categories;
 
-    constructor(imageRoot : string, name : string, description : string){
+    constructor(imageRoot : string, name : string, description : string, category : categories){
         this.imageRoot = imageRoot;
         this.name = name;
         this.description = description;
+        this.category = category;
     }
 
     get ImageRoot(): string
@@ -17,6 +21,10 @@ class Product{
 
     get Name() : string {
         return this.name;
+    }
+
+    get Category() : string {
+        return this.category;
     }
 
     get Description() : string {

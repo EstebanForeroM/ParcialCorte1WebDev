@@ -77,8 +77,9 @@ footer ul li{
     padding-top: 4rem;
     padding-left: 1rem;
     z-index: 50;
+    transition: 0.5s;
 }
 
 .shop-container-hidden {
-    right: -clamp(20rem, 30vw, 30rem);
+    right: -32rem;
 }
