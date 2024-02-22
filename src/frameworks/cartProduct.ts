@@ -1,4 +1,5 @@
 import { Product } from "../entities/Product.js";
+import { addProductToCart, getButtonId, removeProductFromCart } from "./userInputHandler.js";
 
 class CartProductHTML {
     private HTMLElement: HTMLElement;
@@ -24,7 +25,7 @@ class CartProductHTML {
 
 
         const img = document.createElement('img');
-        img.src = `${this.product.ImageRoot}/${this.product.Name.replace(/\s+/g, '')}.webp`;
+        img.src = `${this.product.ImageRoot}`;
         img.alt = this.product.Description;
         article.appendChild(img);
 
@@ -38,9 +39,10 @@ class CartProductHTML {
 
 
         const plusBtn = document.createElement('button');
-        plusBtn.id = 'plus';
+        
+        plusBtn.id = getButtonId();
         plusBtn.textContent = '+';
-        plusBtn.addEventListener('click', () => this.changeQuantity(1));
+        plusBtn.addEventListener('click', () => addProductToCart(this.productName));
         div.appendChild(plusBtn);
 
 
@@ -50,14 +52,14 @@ class CartProductHTML {
 
 
         const minusBtn = document.createElement('button');
-        minusBtn.id = 'minus';
+        minusBtn.id = getButtonId();
         minusBtn.textContent = '-';
-        minusBtn.addEventListener('click', () => this.changeQuantity(-1));
+        minusBtn.addEventListener('click', () => removeProductFromCart(this.productName));
         div.appendChild(minusBtn);
 
 
         const price = document.createElement('p');
-        price.textContent = `$${this.product.Price.toFixed(2)}`;
+        price.textContent = `$${this.product.Price}`;
         div.appendChild(price);
 
         article.appendChild(div);
@@ -80,3 +82,5 @@ class CartProductHTML {
         parent.appendChild(this.HTMLElement);
     }
 }
+
+export { CartProductHTML };

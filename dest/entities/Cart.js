@@ -18,7 +18,7 @@ class ShoppingCart {
     addProduct(productName) {
         if (this.products[productName] > 0) {
             this.products[productName] += 1;
-            this.onProductQuantityChanged(productName, this.products[productName]);
+            this.onProductQuantityChanged(productName, 1);
         }
         else {
             this.products[productName] = 1;
@@ -28,7 +28,7 @@ class ShoppingCart {
     removeProduct(productName) {
         if (this.products[productName] > 1) {
             this.products[productName] -= 1;
-            this.onProductQuantityChanged(productName, this.products[productName]);
+            this.onProductQuantityChanged(productName, -1);
         }
         else {
             delete this.products[productName];

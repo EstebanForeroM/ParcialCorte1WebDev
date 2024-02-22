@@ -1,3 +1,4 @@
+import { addProductToCart, getButtonId, removeProductFromCart } from "./userInputHandler.js";
 class CartProductHTML {
     constructor(product) {
         this.product = product;
@@ -12,7 +13,7 @@ class CartProductHTML {
         const article = document.createElement('article');
         article.className = 'cart-shopping-item';
         const img = document.createElement('img');
-        img.src = `${this.product.ImageRoot}/${this.product.Name.replace(/\s+/g, '')}.webp`;
+        img.src = `${this.product.ImageRoot}`;
         img.alt = this.product.Description;
         article.appendChild(img);
         const name = document.createElement('h1');
@@ -20,20 +21,20 @@ class CartProductHTML {
         article.appendChild(name);
         const div = document.createElement('div');
         const plusBtn = document.createElement('button');
-        plusBtn.id = 'plus';
+        plusBtn.id = getButtonId();
         plusBtn.textContent = '+';
-        plusBtn.addEventListener('click', () => this.changeQuantity(1));
+        plusBtn.addEventListener('click', () => addProductToCart(this.productName));
         div.appendChild(plusBtn);
         this.quantityElement = document.createElement('p');
         this.quantityElement.textContent = '1';
         div.appendChild(this.quantityElement);
         const minusBtn = document.createElement('button');
-        minusBtn.id = 'minus';
+        minusBtn.id = getButtonId();
         minusBtn.textContent = '-';
-        minusBtn.addEventListener('click', () => this.changeQuantity(-1));
+        minusBtn.addEventListener('click', () => removeProductFromCart(this.productName));
         div.appendChild(minusBtn);
         const price = document.createElement('p');
-        price.textContent = `$${this.product.Price.toFixed(2)}`;
+        price.textContent = `$${this.product.Price}`;
         div.appendChild(price);
         article.appendChild(div);
         return article;
@@ -52,4 +53,4 @@ class CartProductHTML {
         parent.appendChild(this.HTMLElement);
     }
 }
-export {};
+export { CartProductHTML };
