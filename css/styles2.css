@@ -111,6 +111,7 @@ header h1{
     border-style: none;
     color: rgb(255, 255, 255);
     font-weight: 800;
+    cursor: pointer;
 }
 
 .food-card img {

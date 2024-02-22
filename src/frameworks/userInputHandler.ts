@@ -14,10 +14,11 @@ function setButtonEventListener(buttonId: string, productName: string, action : 
     mappingIdToProduct[buttonId] = [productName, action]
     if (button) {
         console.log('button ' + button + ' id: ' + buttonId + ' productName: ' + productName + ' action: ' + action)
-        button.addEventListener('click', (e) => {
+        button.onclick =(e) => {
+            console.log("aaa");
             if (e.target) {
-                const target = e.target as HTMLElement;
-                const id = target.id;
+                let target = e.target as HTMLElement;
+                let id = target.id;
                 const [productName, action] = mappingIdToProduct[id];
                 if(action === "+"){
                     addProductToCart(productName);
@@ -25,7 +26,7 @@ function setButtonEventListener(buttonId: string, productName: string, action : 
                     removeProductFromCart(productName);
                 }
             }
-        })
+        }
     }
 }
 

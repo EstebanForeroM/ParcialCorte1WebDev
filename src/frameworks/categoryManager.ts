@@ -18,6 +18,8 @@ const categorieshtmlElements: {[key:string] : HTMLElement | null} = {
 
 console.log("productos creados")
 
+let callStack: {id1: string, productName: string, operation: string}[] = [];
+
 productsList.forEach(product => {
     let addButtonId = getButtonId();
     let removeButtonId = getButtonId();
@@ -31,16 +33,21 @@ productsList.forEach(product => {
                 <p>${product.Description}</p>
                 <div class="button-card-box">
                     <p>${product.Price}</p>
-                    <button class = 'btn-operation' id = '${addButtonId}'> + </button>
+                    <button id = '${addButtonId}'> + </button>
                     <p>0</p>
-                    <button class = 'btn-operation' id= '${removeButtonId}'> - </button>
+                    <button id= '${removeButtonId}'> - </button>
                 </div>
             </div>
         </article>
         `;
         console.log("carta creada")
 
-        setButtonEventListener(addButtonId, product.Name, "+");
-        setButtonEventListener(removeButtonId, product.Name, "-");
+        callStack.push({id1: addButtonId, productName: product.Name, operation: "+"});
+        callStack.push({id1: removeButtonId, productName: product.Name, operation: "-"});
     }
+})
+
+
+callStack.forEach(call => {
+    setButtonEventListener(call.id1, call.productName, call.operation);
 })
