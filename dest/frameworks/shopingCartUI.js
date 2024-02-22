@@ -14,3 +14,4 @@ function changeUIcartState(event) {
         isVisible = true;
     }
 }
+export {};

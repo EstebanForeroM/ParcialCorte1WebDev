@@ -13,9 +13,7 @@ function setButtonEventListener(buttonId: string, productName: string, action : 
     let button = document.getElementById(buttonId);
     mappingIdToProduct[buttonId] = [productName, action]
     if (button) {
-        console.log('button ' + button + ' id: ' + buttonId + ' productName: ' + productName + ' action: ' + action)
         button.onclick =(e) => {
-            console.log("aaa");
             if (e.target) {
                 let target = e.target as HTMLElement;
                 let id = target.id;
