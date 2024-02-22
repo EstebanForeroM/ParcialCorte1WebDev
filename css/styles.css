@@ -1,6 +1,6 @@
 main{
     height: 100vh;
-    background-image: url("img/mainImage.webp");
+    background-image: url("/img/mainImage.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

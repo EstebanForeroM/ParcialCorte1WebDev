@@ -1,12 +1,16 @@
 class Product {
-    constructor(imageRoot, name, description, category) {
+    constructor(imageRoot, name, description, category, price) {
         this.imageRoot = imageRoot;
         this.name = name;
         this.description = description;
         this.category = category;
+        this.price = price;
     }
     get ImageRoot() {
         return this.imageRoot;
+    }
+    get Price() {
+        return this.price;
     }
     get Name() {
         return this.name;
