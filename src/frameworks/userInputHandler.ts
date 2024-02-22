@@ -2,8 +2,6 @@ import { cart } from "./cartData.js";
 
 let idCounter: number = 0;
 
-let mappingIdToProduct: {[id: string] : [string, string]} = {};
-
 function getButtonId() : string {
     idCounter++;
     return "btn-operation-" + idCounter;
@@ -11,13 +9,9 @@ function getButtonId() : string {
 
 function setButtonEventListener(buttonId: string, productName: string, action : string) {
     let button = document.getElementById(buttonId);
-    mappingIdToProduct[buttonId] = [productName, action]
     if (button) {
         button.onclick =(e) => {
             if (e.target) {
-                let target = e.target as HTMLElement;
-                let id = target.id;
-                const [productName, action] = mappingIdToProduct[id];
                 if(action === "+"){
                     addProductToCart(productName);
                 } else {
