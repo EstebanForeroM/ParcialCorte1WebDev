@@ -24,4 +24,10 @@ let productsList = [
     new Product("img/img-food/fruitSalad.jpeg", "Fruit salad", "A refreshing salad made with a blend of fresh, ripe fruits, including strawberries, blueberries, and kiwi.", categories.ENTRADAS, 10.99),
 ]
 
-export { productsList };
+let productsHashMap = new Map<string, Product>();
+
+productsList.forEach(product => {
+    productsHashMap.set(product.Name, product);
+})
+
+export { productsList, productsHashMap };

@@ -25,6 +25,7 @@ function setButtonEventListener(buttonId: string, productName: string, action : 
 function addProductToCart(productName: string) {
     console.log('Adding product to cart, product name: ', cart);
     cart.addProduct(productName);
+    console.log("cart price: ", cart.ProductsPrice);
 }
 
 function removeProductFromCart(productName: string) {

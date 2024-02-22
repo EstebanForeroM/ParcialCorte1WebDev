@@ -22,4 +22,8 @@ let productsList = [
     new Product("img/img-food/mushroomssoup.jpeg", "Mushrooms soup", "A rich, creamy soup, made with a blend of fresh, wild mushrooms and a hint of garlic.", categories.ENTRADAS, 12.99),
     new Product("img/img-food/fruitSalad.jpeg", "Fruit salad", "A refreshing salad made with a blend of fresh, ripe fruits, including strawberries, blueberries, and kiwi.", categories.ENTRADAS, 10.99),
 ];
-export { productsList };
+let productsHashMap = new Map();
+productsList.forEach(product => {
+    productsHashMap.set(product.Name, product);
+});
+export { productsList, productsHashMap };
