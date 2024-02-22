@@ -1,4 +1,3 @@
-
 enum categories {
     ENTRADAS = "entradas",
     PLATOSPRINCIPALES = "platosPrincipales",

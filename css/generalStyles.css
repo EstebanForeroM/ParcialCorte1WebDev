@@ -71,7 +71,7 @@ footer ul li{
     top: 0;
     height: 100%;
     width: clamp(20rem, 30vw, 30rem);
-    background-color: rgb(255, 255, 255);
+    background-color: #f7f8f9;
     box-shadow: black 10px -10px 10px 10px;
     right: 0;
     padding-top: 4rem;
@@ -82,4 +82,41 @@ footer ul li{
 
 .shop-container-hidden {
     right: -32rem;
+} 
+
+.cart-shopping-item img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    max-height: 4rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.cart-shopping-item {
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    height: 4rem;
+    width: 90%;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-shopping-item button {
+    background-color: #ff254a;   
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 1.2rem;
+    border-style: none;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cart-shopping-item button:hover {
+    background-color: orange;
+    transform: scale(1.1);
 }

@@ -64,8 +64,8 @@ header h1{
     background-color: rgb(194, 194, 194);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: min(2rem, 4rem);
+    justify-content: flex-start;
+    gap: min(3rem, 5rem);
 }
 
 .category-container h1{
@@ -126,7 +126,4 @@ header h1{
     height: 8rem;
 }
 
-.food-card{
-
-}
-
+/* ! cart elements styles */

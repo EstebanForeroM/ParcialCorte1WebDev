@@ -24,20 +24,6 @@
 
                 <section class="category-container" id="container-entradas">
                     <h1>Entradas</h1>
-                    <article class="food-card">
-                        <img src="img/img-food/dessert1.webp" alt="">
-                        <div class="card-text-container">
-                            <h2></h2>
-                            <p>
-                            </p>
-                            <div class="button-card-box">
-                                <p>$10.0</p>
-                                <button> + </button>
-                                <p>1</p>
-                                <button> - </button>
-                            </div>
-                        </div>
-                    </article>
                 </section>
                 <section class="category-container" id="container-platos-principales">
                     <h1>Platos Principales</h1>
@@ -52,8 +38,18 @@
             </section>
         </main>
 
-        <section class="shop-container shop-container-hidden">
+        <section class="shop-container">
             <h1>Carrito de Compras</h1>
+            <section id="carts-elements-container">
+                <article class="cart-shopping-item">
+                    <img src="img/img-food/BeefWellington.webp" alt="">
+                    <h1>Ensalada Cesár</h1>
+                    <button>+</button>
+                    <p>Cantidad</p>
+                    <button>-</button>
+                    <p>$34.99</p>
+                </article>
+            </section>
         </section>
 
         <footer>
@@ -71,6 +67,8 @@
             </div>
         </footer>
     </body>
+    <script type="module" src="dest/entities/Categories.js"></script>
+    <script type="module" src="dest/entities/Product.js"></script>
     <script src="dest/frameworks/shopingCartUI.js" ></script>
     <script src="dest/frameworks/categoryManager.js" type="module"></script>
 </html>

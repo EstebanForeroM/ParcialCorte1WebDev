@@ -2,7 +2,7 @@
   "name": "parcialcorte1webdev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "categoryManager.js",
   "scripts": {
     "start": "tsc --watch"
   },
