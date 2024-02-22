@@ -6,7 +6,7 @@ class ShoppingCart {
         this.products[productName] = this.products[productName] + 1 || 1;
     }
     removeProduct(productName) {
-        if (this.products[productName] > 2) {
+        if (this.products[productName] > 1) {
             this.products[productName] -= 1;
         }
         else {

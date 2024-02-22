@@ -23,12 +23,12 @@ function setButtonEventListener(buttonId: string, productName: string, action : 
 }
 
 function addProductToCart(productName: string) {
-    console.log('Adding product to cart, product name: ', productName);
+    console.log('Adding product to cart, product name: ', cart);
     cart.addProduct(productName);
 }
 
 function removeProductFromCart(productName: string) {
-    console.log('Removing product from cart: ' + productName);
+    console.log('Removing product from cart: ',  cart);
     cart.removeProduct(productName);
 }
 
